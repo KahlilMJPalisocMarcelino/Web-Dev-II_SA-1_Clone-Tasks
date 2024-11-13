@@ -1,0 +1,358 @@
+// Variables for breakpoints
+$mobile-min: 360px;
+$mobile-max: 719px;
+$tablet-min: 720px;
+$desktop-min: 1024px;
+
+// Spacing variables for each device
+$spacing-mobile-small: 16px;
+$spacing-tablet-large: 32px;
+$spacing-desktop-large: 48px;
+
+body {
+  margin: 0;
+ }
+ 
+ header { //header
+     .navbar  { //the nav
+         display: flex;
+         box-shadow: 0px 10px #070410;
+         padding: $spacing-mobile-small;
+         justify-content: space-between;
+         font-family: Teko;
+ 
+         .watch {
+             .active {
+                 text-decoration: none; //removes the underline for the anchor
+                 font-size: 3em;
+                 color: #070410;
+             }
+         }
+ 
+         .fourGenre { //the four Genre
+         display: flex;
+         align-items: center;
+         justify-content: space-evenly;
+             a { // styling the links for uniformity
+                 text-decoration: none;
+                 color: #070410;
+                 margin:  0 16px;
+             }
+         }
+ 
+         .search button {
+             border-radius: 15px;
+             font-family: Teko;
+             font-size: 2em;
+         } 
+     }
+ }
+ 
+ main { // the content
+     max-width: 900px;
+     margin: auto;
+     font-size: 1.5em;
+     font-family: Lato;
+ 
+     .movie-box {
+         border: solid 1px #070410 ;
+         font-family: Lato;
+         margin: 25px;
+     
+         .descWatch { // for each movie poster's descriptions
+             padding: 30px;
+         }
+ 
+         button { // movie poster buttons
+             font-family: Teko;
+             font-size: 2em;
+         }  
+     }
+ 
+     .BRB { // barbie
+         img {
+             height:350px;
+             width: 100%;
+             object-fit: cover;
+         }
+ 
+         .textWN {
+             padding: 0px 55px;
+             border-radius: 15px;
+             width: 88%;
+ 
+             button {
+                 border-radius: 16px;
+                 width: 85%; 
+                 margin: 16px;
+             }
+         }
+     }
+ 
+     .PS, .HF {
+         display: flex;
+         flex-direction: column; //to make it side by side
+         margin-right: $spacing-mobile-small;
+         img {
+             width: 100%;
+             height: auto;
+         }
+     }
+ 
+     .LLL, .WHRR, .HK {
+         display: flex;
+         display: grid;
+         grid-template-columns: 50% 50%; //instead of auto auto - to equalise the size of the content and image 
+       
+         img {
+           width: 100%;
+           height:100%;
+           }   
+       }
+ }
+ 
+
+
+// MOBILE
+@media only screen and (min-width:$mobile-min) and (max-width: $mobile-max){
+
+  header {
+      width: 135%;
+      .navbar{
+          .fourGenre {
+              display: none;
+          }
+      }   
+  }
+  
+  main {
+      .watch, .search {
+          width: 50%;
+      }
+      .movie-box {
+          margin: 32px;
+          width: 115%;
+      }
+
+      .BRB {
+          box-shadow: 10px 10px  #070410; 
+          .textWN {
+              padding: 16px;
+              border-radius: 15px;
+          }
+
+          button {
+              width: 100%;
+              margin: 0;
+          }
+      }
+
+      .PS.movie-box, .HF.movie-box{
+          box-shadow: 10px 10px  #070410;
+          width: 115%;
+          padding: 0;
+          
+         button {
+              width: 100%;
+              margin: 0;
+              border-radius: 15px;
+          }
+      }
+
+      .LLL, .WHRR, .HK {
+          grid-template-columns: 100%;
+          box-shadow: 10px 10px  #070410;
+          button {
+              width: 100%;
+              margin: 0;
+              border-radius: 15px;
+          }
+      }
+  }
+}
+
+// TABLET
+@media screen and (min-width: $tablet-min) and (max-width:$desktop-min){
+
+  .navbar {
+      display: flex;
+      box-shadow: 0px 10px #070410;
+      padding: $spacing-mobile-small;
+      font-family: Teko;
+  
+      .active {
+          font-size: 1.5em;
+          margin: 16px;
+      }
+  
+      .search button {
+          border-radius: 15px;
+          font-family: Teko;
+          font-size: 2em;
+          margin: 16px;
+      }
+      a { // styling the links for uniformity
+          text-decoration: none;
+          color: #070410;
+      }
+    
+    .fourGenre {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.5em;
+    }
+  }
+  
+  main {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+  
+    .BRB.movie-box {
+      box-shadow: 10px 10px  #070410;
+      
+      img {
+          height: 300px;
+          width: 320px;
+      }
+  
+      .textWN{
+          border-radius: 15px;
+          padding: 0;
+  
+          button {
+              margin: 16px;
+              padding: 0px 70px;
+          }
+          p {
+              padding: 16px;
+              margin: 0;
+          }
+      }
+    }
+  
+    .PS.movie-box, .HF.movie-box {
+      box-shadow: 10px 10px  #070410;
+      width: 85%;
+  
+      img {
+        height: 300px;
+        width: auto;
+      }
+  
+      .descWatch {
+          justify-content: space-between;
+          padding: 0;
+          flex-grow: 1;
+          button {
+              margin: 16px;
+              padding: 10px 65px;
+              border-radius: 15px;
+          }
+          p {
+              margin: 0;
+              padding: 16px;
+          }
+        }
+      }
+    }
+  
+    .LLL.movie-box, .HK.movie-box, .WHRR.movie-box {
+      box-shadow: 10px 10px  #070410;
+      display: flex;
+      flex-direction: column;
+      
+      img {
+          height: 320px;
+          width: auto;
+      }
+      .descWatch {
+          display: flex;
+          padding: 16px;
+          flex-direction: column;
+          justify-content: space-between;
+          p {
+              margin: 0;
+            }
+  
+          button {
+            margin: 16px;
+            padding: 10px 65px;
+            border-radius: 15px;  
+          }
+      }
+    }
+  }
+
+
+
+// DESKTOP
+@media screen and (min-width: $desktop-min) {
+  header {
+      .fourGenre {
+          font-size: 25px;
+        }
+  }
+
+  main {
+      gap: 48px;
+      .movie-box {
+          box-shadow: 10px 10px  #070410;
+          flex-grow: 1;
+      }
+
+      .BRB {
+          display: flex;
+          flex-direction: column;
+           width: 95%;
+          .textWN {
+              display: flex;
+
+              button {
+                  padding: 30px;
+              }
+          }
+      }
+
+      .PS.movie-box {
+          float: left;
+          display: inline;
+          width: 45%;
+          height: max-content;
+          margin: 0 48px 0 32px; 
+
+          .descWatch {
+              padding: 0 16px 48px;
+              margin-bottom: 32px;
+              button {
+                  width: 100%;
+                  margin-top: 48px;
+                  border-radius: 16px;
+              }
+          }
+      }
+      
+      .HF.movie-box {
+          width: 44%;
+          margin: 0 48px 0 32px; 
+          .descWatch {
+              padding: 29px;
+              button {
+                  width: 100%;
+                  border-radius: 16px;
+              }
+          }
+      }
+
+      .LLL.movie-box, .WHRR.movie-box, .HK.movie-box {
+          margin-top: 48px;
+
+          .descWatch {
+              button {
+                  width: 100%;
+                  border-radius: 16px;
+              }
+          }
+      }
+  }
+}

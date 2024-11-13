@@ -1,0 +1,284 @@
+body {
+  margin: 0;
+}
+
+header .navbar {
+  display: flex;
+  box-shadow: 0px 10px #070410;
+  padding: 16px;
+  justify-content: space-between;
+  font-family: Teko;
+}
+header .navbar .watch .active {
+  text-decoration: none;
+  font-size: 3em;
+  color: #070410;
+}
+header .navbar .fourGenre {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+header .navbar .fourGenre a {
+  text-decoration: none;
+  color: #070410;
+  margin: 0 16px;
+}
+header .navbar .search button {
+  border-radius: 15px;
+  font-family: Teko;
+  font-size: 2em;
+}
+
+main {
+  max-width: 900px;
+  margin: auto;
+  font-size: 1.5em;
+  font-family: Lato;
+}
+main .movie-box {
+  border: solid 1px #070410;
+  font-family: Lato;
+  margin: 25px;
+}
+main .movie-box .descWatch {
+  padding: 30px;
+}
+main .movie-box button {
+  font-family: Teko;
+  font-size: 2em;
+}
+main .BRB img {
+  height: 350px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .BRB .textWN {
+  padding: 0px 55px;
+  border-radius: 15px;
+  width: 88%;
+}
+main .BRB .textWN button {
+  border-radius: 16px;
+  width: 85%;
+  margin: 16px;
+}
+main .PS, main .HF {
+  display: flex;
+  flex-direction: column;
+  margin-right: 16px;
+}
+main .PS img, main .HF img {
+  width: 100%;
+  height: auto;
+}
+main .LLL, main .WHRR, main .HK {
+  display: flex;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+main .LLL img, main .WHRR img, main .HK img {
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 719px) {
+  header {
+    width: 135%;
+  }
+  header .navbar .fourGenre {
+    display: none;
+  }
+  main .watch, main .search {
+    width: 50%;
+  }
+  main .movie-box {
+    margin: 32px;
+    width: 115%;
+  }
+  main .BRB {
+    box-shadow: 10px 10px #070410;
+  }
+  main .BRB .textWN {
+    padding: 16px;
+    border-radius: 15px;
+  }
+  main .BRB button {
+    width: 100%;
+    margin: 0;
+  }
+  main .PS.movie-box, main .HF.movie-box {
+    box-shadow: 10px 10px #070410;
+    width: 115%;
+    padding: 0;
+  }
+  main .PS.movie-box button, main .HF.movie-box button {
+    width: 100%;
+    margin: 0;
+    border-radius: 15px;
+  }
+  main .LLL, main .WHRR, main .HK {
+    grid-template-columns: 100%;
+    box-shadow: 10px 10px #070410;
+  }
+  main .LLL button, main .WHRR button, main .HK button {
+    width: 100%;
+    margin: 0;
+    border-radius: 15px;
+  }
+}
+@media screen and (min-width: 720px) and (max-width: 1024px) {
+  .navbar {
+    display: flex;
+    box-shadow: 0px 10px #070410;
+    padding: 16px;
+    font-family: Teko;
+  }
+  .navbar .active {
+    font-size: 1.5em;
+    margin: 16px;
+  }
+  .navbar .search button {
+    border-radius: 15px;
+    font-family: Teko;
+    font-size: 2em;
+    margin: 16px;
+  }
+  .navbar a {
+    text-decoration: none;
+    color: #070410;
+  }
+  .navbar .fourGenre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5em;
+  }
+  main {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+  }
+  main .BRB.movie-box {
+    box-shadow: 10px 10px #070410;
+  }
+  main .BRB.movie-box img {
+    height: 300px;
+    width: 320px;
+  }
+  main .BRB.movie-box .textWN {
+    border-radius: 15px;
+    padding: 0;
+  }
+  main .BRB.movie-box .textWN button {
+    margin: 16px;
+    padding: 0px 70px;
+  }
+  main .BRB.movie-box .textWN p {
+    padding: 16px;
+    margin: 0;
+  }
+  main .PS.movie-box, main .HF.movie-box {
+    box-shadow: 10px 10px #070410;
+    width: 85%;
+  }
+  main .PS.movie-box img, main .HF.movie-box img {
+    height: 300px;
+    width: auto;
+  }
+  main .PS.movie-box .descWatch, main .HF.movie-box .descWatch {
+    justify-content: space-between;
+    padding: 0;
+    flex-grow: 1;
+  }
+  main .PS.movie-box .descWatch button, main .HF.movie-box .descWatch button {
+    margin: 16px;
+    padding: 10px 65px;
+    border-radius: 15px;
+  }
+  main .PS.movie-box .descWatch p, main .HF.movie-box .descWatch p {
+    margin: 0;
+    padding: 16px;
+  }
+  .LLL.movie-box, .HK.movie-box, .WHRR.movie-box {
+    box-shadow: 10px 10px #070410;
+    display: flex;
+    flex-direction: column;
+  }
+  .LLL.movie-box img, .HK.movie-box img, .WHRR.movie-box img {
+    height: 320px;
+    width: auto;
+  }
+  .LLL.movie-box .descWatch, .HK.movie-box .descWatch, .WHRR.movie-box .descWatch {
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .LLL.movie-box .descWatch p, .HK.movie-box .descWatch p, .WHRR.movie-box .descWatch p {
+    margin: 0;
+  }
+  .LLL.movie-box .descWatch button, .HK.movie-box .descWatch button, .WHRR.movie-box .descWatch button {
+    margin: 16px;
+    padding: 10px 65px;
+    border-radius: 15px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .fourGenre {
+    font-size: 25px;
+  }
+  main {
+    gap: 48px;
+  }
+  main .movie-box {
+    box-shadow: 10px 10px #070410;
+    flex-grow: 1;
+  }
+  main .BRB {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+  }
+  main .BRB .textWN {
+    display: flex;
+  }
+  main .BRB .textWN button {
+    padding: 30px;
+  }
+  main .PS.movie-box {
+    float: left;
+    display: inline;
+    width: 45%;
+    height: -moz-max-content;
+    height: max-content;
+    margin: 0 48px 0 32px;
+  }
+  main .PS.movie-box .descWatch {
+    padding: 0 16px 48px;
+    margin-bottom: 32px;
+  }
+  main .PS.movie-box .descWatch button {
+    width: 100%;
+    margin-top: 48px;
+    border-radius: 16px;
+  }
+  main .HF.movie-box {
+    width: 44%;
+    margin: 0 48px 0 32px;
+  }
+  main .HF.movie-box .descWatch {
+    padding: 29px;
+  }
+  main .HF.movie-box .descWatch button {
+    width: 100%;
+    border-radius: 16px;
+  }
+  main .LLL.movie-box, main .WHRR.movie-box, main .HK.movie-box {
+    margin-top: 48px;
+  }
+  main .LLL.movie-box .descWatch button, main .WHRR.movie-box .descWatch button, main .HK.movie-box .descWatch button {
+    width: 100%;
+    border-radius: 16px;
+  }
+}/*# sourceMappingURL=style.css.map */
