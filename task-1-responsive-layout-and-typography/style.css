@@ -1,0 +1,375 @@
+body {
+    background-color: #e9e9e9;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    background-color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    border:#14181d 1px solid;
+}
+
+/* LOGO */
+header {
+    display: block;
+    text-align: center;
+    margin: 50px;
+}
+
+.logo {
+    width: 80px;
+}
+
+/* NAVBAR */
+ul {
+    list-style-type: none;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    margin: 0;
+    margin-top: 50px;
+}
+
+ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+    font-family: 'Josefin Sans', cursive;
+}
+
+/* TYPOGRAPHY */
+h1, h2 {
+    font-family: 'Protest Guerrilla', cursive;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center; /* AUTHOR'S HEADING */
+}
+.ErasedTapes h2{
+    text-align: left;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+/* SPACE */
+.space {
+    margin: 50px;
+}
+
+/* FOR EACH DEVICE */
+.section {
+    margin-bottom: 12px;
+}
+
+
+
+/* AUTHOR SECTION */
+.Author {
+    display: flex;
+    align-items: center; 
+    padding: 50px;
+}
+
+.Author img {
+    width: 200px; 
+    border-radius: 50%; /* image - circle */
+}
+
+/* ALBUM */
+.album-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.album-gallery, .album-cover { 
+    display: grid;
+    grid-template-columns: auto auto; /* columns layout auto size */
+
+}
+
+.album-gallery img {
+    width: 100%
+}
+
+/* FOOTER */
+footer {
+    background-color: #14181d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* LOGO(responsive) */
+@media (min-width: 1024px) {
+    header img {
+        width: 200px;
+    }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 540px) {
+    h1, h2, .ErasedTapes h2 {
+        text-align: center;
+    }
+
+    .space {
+        margin: 12px;
+    }
+
+    .album-cover {
+        display: block;
+    }
+
+    .FA {
+        display: none; /* to make 1 asset disappear*/
+    }
+    .Author{
+        display: flex;
+        flex-direction: column-reverse; /* to switch */
+    
+    }
+    .section {
+
+        margin-bottom: 20px;
+
+    }
+}
+
+/* LARGE MOBILE */
+@media (min-width: 540px) {
+    h1, h2, .ErasedTapes h2 {
+        text-align: center;
+    }
+
+    .space {
+        margin: 12px;
+    }
+
+    .album-cover {
+        display: block;
+    }
+
+    .FA {
+        display: none; /* to make 1 asset disappear*/
+    }
+    .Author{
+        display: flex;
+        flex-direction: column-reverse; /* to switch */
+    
+    }
+    .section {
+
+        margin-bottom: 20px;
+
+    }
+}
+
+
+/* TABLET */
+@media (min-width: 720px) {
+   /*  1ST Paragraph - Desktop */
+    main .ErasedTapes p {
+        font-size: 1.5rem;
+}
+
+    ul li a {
+        text-decoration: none;
+        font-size: 1.2rem;
+        color: black;
+        font-family: 'Josefin Sans', cursive;
+    }
+    
+    /* TYPOGRAPHY */
+    h1, h2 {
+        font-family: 'Protest Guerrilla', cursive;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    
+    h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+    
+    h2 {
+        font-size: 2rem;
+        text-align: center; /* AUTHOR'S HEADING */
+    }
+    .ErasedTapes h2{
+        text-align: center;
+    }
+    
+    p {
+        line-height: 1.6;
+        margin-bottom: 12px;
+    }
+    
+    
+    
+    /* AUTHOR SECTION */
+    .Author  {
+        display: flex;
+        padding: 50px;
+        flex-direction: row; /* side by side */
+    }
+    
+    .Profile img {
+        width: 200px;
+        margin-left: 30px;
+        border-radius: 50%; /* image - circle */
+    }
+    
+    /* ALBUM */
+    .album-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .album-gallery, .album-cover { 
+        display: grid;
+        grid-template-columns: auto auto; /* columns layout auto size */
+    
+    }
+    
+    .album-gallery img {
+        width: 100%
+    }
+
+    .FA {
+        display: none; /* to hide one asset - 5 to 4 photos */
+    }
+
+
+}
+
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+    
+    /*  1ST Paragraph - Desktop */
+    main .ErasedTapes p {
+        font-size: 1.5rem;
+}
+
+    /*  THREE HEADINGS  */
+    .ThreeColumns
+    {
+        column-count: 3; /* to split them evenly */
+    }
+
+    ul li a {
+        text-decoration: none;
+        font-size: 1.2rem;
+        color: black;
+        font-family: 'Josefin Sans', cursive;
+    }
+    
+    /* TYPOGRAPHY */
+    h1, h2 {
+        font-family: 'Protest Guerrilla', cursive;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    
+    h1 {
+        font-size: 3rem;
+        margin-top: -10px;
+    }
+    
+    h2 {
+        font-size: 2rem;
+        text-align: center; /* AUTHOR'S HEADING */
+    }
+    .ErasedTapes h2{
+        text-align: left;
+    }
+    
+    p {
+        line-height: 1.6;
+        margin-bottom: 12px;
+    }
+    
+    
+    .space {
+        margin: 50px;
+    }
+    
+    /* FOR EACH */
+    .section {
+        margin-bottom: 12px;
+    }
+    
+    
+    
+    /* AUTHOR SECTION */
+    .Author {
+        display: flex;
+        padding: 50px;
+        flex-direction: row; /* side by side */
+
+    }
+    
+    .Profile {
+        width: 200px;
+        border-radius: 50%; /* image - circle */
+        margin-left: 5px;
+
+    }
+    
+    /* ALBUM */
+    .album-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .album-gallery, .album-cover { 
+        display: grid;
+        grid-template-columns: auto auto; /* columns layout auto size */
+    
+    }
+    
+    .album-gallery img {
+        width: 100%
+    }
+
+    .FA {
+        display: contents; /* from 4 to 5 assets present */
+    }
+
+
+}
+
+
+@media (min-width: 1024px) {
+    .section {
+        margin-bottom: 50px;
+    }
+}
+
+/* 1ST Paragraph - Desktop */
+@media (min-width: 1024px) {
+    main .ErasedTapes p {
+        font-size: 1.5rem;
+    }
+    .ThreeColumns
+    {
+        column-count: 3; /* to split them evenly */
+    }
+}
